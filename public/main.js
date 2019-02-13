@@ -15,7 +15,8 @@ const getWeather = () => {
       url =
         'https://api.openweathermap.org/data/2.5/weather?appid=59c6f243bf44bdca855e2e8f1c663981&zip=' +
         cityValue +
-        ',us'
+        ',us' +
+        '&units=imperial'
       // `https://api.openweathermap.org/data/2.5/weather?appid=59c6f243bf44bdca855e2e8f1c663981&zip=
       // ${cityValue},us&units=imperial`
       getWeatherName(url)
@@ -28,6 +29,7 @@ const getWeather = () => {
       getWeatherName(url)
     }
   }
+  // getPosition()
 }
 
 const getWeatherName = url => {
@@ -51,4 +53,23 @@ const getWeatherName = url => {
     })
 }
 
+const clearText = () => {
+  document.querySelector('.weather-search-text').value = ''
+  document.querySelector('.weather-city-label').textContent = ''
+}
+
+// const getPosition = () => {
+//   fetch(
+//     ' https://maps.googleapis.com/maps/api/js?key=AIzaSyAbON2fVGxIk8HFwdg1W_4PKgOR713_1ZY&callback=initMap'
+//   )
+//     .then(resp => {
+//       return resp.json
+//     })
+
+//     .then(navigator => {
+//       console.log(navigator)
+//     })
+// }
+
 document.querySelector('.search-button').addEventListener('click', getWeather)
+document.querySelector('.clear-button').addEventListener('click', clearText)
