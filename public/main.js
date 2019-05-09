@@ -34,7 +34,7 @@ const getWeatherName = url => {
     })
     .then(weather => {
       currentWeather = weather
-      console.log(currentWeather)
+      console.log(weather)
       document.querySelector('.weather-city-label').textContent =
         'The Weather in ' +
         currentWeather.name +

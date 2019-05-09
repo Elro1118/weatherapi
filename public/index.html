@@ -7,9 +7,19 @@
     <link rel="shortcut icon" href="/favicon.ico" />
     <link rel="stylesheet" href="/screen.css" />
   </head>
+
   <body>
-    <section class="weather">
-      <h1>My Weather API</h1>
+    <section class="my-weather">
+      <h1>My Weather</h1>
+      <section>
+        <input type="text" class="weather-search-text" />
+        <button class="search-button">search</button>
+        <button class="clear-button">Clear</button>
+      </section>
+      <h1 class="weather-city-label"></h1>
+    </section>
+    <section class="other-weather">
+      <h1>Other Weather</h1>
       <section>
         <input type="text" class="weather-search-text" />
         <button class="search-button">search</button>
@@ -19,4 +29,7 @@
     </section>
     <script src="/main.js" charset="utf-8"></script>
   </body>
+  <footer>
+    Copyright 2019 Silvana Rojas made with ❤ at Suncoast Developers Guild
+  </footer>
 </html>
